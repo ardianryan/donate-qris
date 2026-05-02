@@ -7,7 +7,7 @@ Disallow: /.env
 Disallow: /.git
 
 # Sitemap
-Sitemap: https://donate.honowa.my.id/sitemap.xml
+Sitemap: https://donate.ppti.me/sitemap.xml
 
 # AI Crawlers
 User-agent: GPTBot

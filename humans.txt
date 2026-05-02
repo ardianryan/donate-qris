@@ -11,6 +11,7 @@
 
 /* SITE */
     Last update: 2026/05/02
+    Repository: https://github.com/elianhardyy/hono-wa-web-multidevice/
     Language: Indonesian / English
     Doctype: HTML5
     IDE: VS Code, Antigravity AI

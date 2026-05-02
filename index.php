@@ -39,14 +39,14 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://donate.honowa.my.id/">
+    <meta property="og:url" content="https://donate.ppti.me/">
     <meta property="og:title" content="Buy Me A Coffee - HonoWA WhatsApp API">
     <meta property="og:description" content="REST API & Dashboard untuk WhatsApp multi-session. Dukung pengembangan HonoWA dengan donasi kopi melalui QRIS otomatis.">
     <meta property="og:image" content="https://raw.githubusercontent.com/elianhardyy/hono-wa-web-multidevice/refs/heads/main/public/assets/uploads/honowa.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://donate.honowa.my.id/">
+    <meta property="twitter:url" content="https://donate.ppti.me/">
     <meta property="twitter:title" content="Buy Me A Coffee - HonoWA WhatsApp API">
     <meta property="twitter:description" content="REST API & Dashboard untuk WhatsApp multi-session. Dukung pengembangan HonoWA dengan donasi kopi melalui QRIS otomatis.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/elianhardyy/hono-wa-web-multidevice/refs/heads/main/public/assets/uploads/honowa.png">
