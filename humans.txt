@@ -1,0 +1,16 @@
+/* TEAM */
+    Developer: Ardian Ryan
+    Contact: hello [at] honowa.my.id
+    Twitter: @ardianryan
+    Location: Jakarta, Indonesia
+
+/* THANKS */
+    Hono.js Team
+    whatsapp-web.js Team
+    Rifaldo-dev (Reference logic)
+
+/* SITE */
+    Last update: 2026/05/02
+    Language: Indonesian / English
+    Doctype: HTML5
+    IDE: VS Code, Antigravity AI

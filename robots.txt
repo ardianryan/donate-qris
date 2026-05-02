@@ -1,0 +1,17 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /qrisdinamis/
+Disallow: /_sdk/
+Disallow: /.env
+Disallow: /.git
+
+# Sitemap
+Sitemap: https://donate.honowa.my.id/sitemap.xml
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
