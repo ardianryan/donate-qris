@@ -11,11 +11,11 @@ config()
 const app = new Hono()
 
 // Serve static files from root for SEO files
-app.use('/robots.txt', serveStatic({ path: './robots.txt' }))
-app.use('/sitemap.xml', serveStatic({ path: './sitemap.xml' }))
-app.use('/humans.txt', serveStatic({ path: './humans.txt' }))
-app.use('/security.txt', serveStatic({ path: './security.txt' }))
-app.use('/.well-known/security.txt', serveStatic({ path: './security.txt' }))
+app.use('/robots.txt', serveStatic({ path: './public/robots.txt' }))
+app.use('/sitemap.xml', serveStatic({ path: './public/sitemap.xml' }))
+app.use('/humans.txt', serveStatic({ path: './public/humans.txt' }))
+app.use('/security.txt', serveStatic({ path: './public/security.txt' }))
+app.use('/.well-known/security.txt', serveStatic({ path: './public/security.txt' }))
 app.use('/honowa.png', serveStatic({ path: './public/honowa.png' }))
 
 // Serve qrisdinamis directory if needed (it has some assets like images)
