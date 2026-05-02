@@ -1,2 +1,4 @@
 .env
 qrisdinamis/.git
+node_modules
+dist
