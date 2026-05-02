@@ -24,7 +24,7 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
     
     <!-- Primary Meta Tags -->
     <meta name="title" content="Buy Me A Coffee - HonoWA WhatsApp API">
-    <meta name="description" content="REST API & Dashboard untuk WhatsApp multi-session menggunakan Hono.js. Dukung pengembangan HonoWA dengan donasi kopi melalui QRIS otomatis.">
+    <meta name="description" content="REST API & Dashboard untuk WhatsApp multi-session menggunakan Hono.js. Gunakan HonoWA secara gratis di GitHub dan dukung kami dengan donasi kopi!">
     <meta name="keywords" content="WhatsApp API, Hono.js, HonoWA, WhatsApp Gateway, Multi-session WhatsApp, REST API WhatsApp, Buy Me A Coffee, QRIS Otomatis, WhatsApp Bot, API WhatsApp Indonesia">
     <meta name="author" content="Ardian Ryan">
     <meta name="language" content="Indonesian">
@@ -130,9 +130,13 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
                             onerror="console.error('Logo failed to load:', this.src); this.style.display='none';">
                     </div>
                     <h1 id="creatorName" class="text-2xl font-extrabold text-gray-800 dark:text-white">HonoWA</h1>
-                    <p id="greetingText" class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">REST API
-                        &amp; Dashboard untuk WhatsApp multi-session. Support development kami dengan membeli kopi! ☕✨
+                    <p id="greetingText" class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        REST API & Dashboard untuk WhatsApp multi-session. Gunakan HonoWA secara gratis untuk proyek Anda! 🚀✨
                     </p>
+                    <a href="https://github.com/elianhardyy/hono-wa-web-multidevice/" target="_blank"
+                        class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 hover:underline">
+                        <span class="material-icons !text-[14px]">code</span> View on GitHub
+                    </a>
                     <p
                         class="mt-3 text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-2 rounded-lg">
                         Hono.js + Unofficial WhatsApp API</p>
@@ -223,7 +227,7 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
         const QRIS_UTAMA = "<?php echo $qrisUtama; ?>";
         const defaultConfig = {
             creator_name: 'Rizky Dev',
-            greeting_text: 'If my work has been helpful to you, buy me a cup of coffee as a token of support! ☕✨',
+            greeting_text: 'HonoWA adalah solusi WhatsApp API gratis & open source. Dukung kami dengan donasi kopi jika proyek ini membantu Anda! ☕✨',
             background_color: '#fffbeb',
             surface_color: '#ffffff',
             text_color: '#1f2937',
