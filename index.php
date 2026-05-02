@@ -3,7 +3,8 @@ $env = [];
 if (file_exists('.env')) {
     $lines = file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
-        if (strpos(trim($line), '#') === 0) continue;
+        if (strpos(trim($line), '#') === 0)
+            continue;
         if (strpos($line, '=') !== false) {
             list($name, $value) = explode('=', $line, 2);
             $env[trim($name)] = trim($value);
@@ -18,9 +19,64 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Me A Coffee</title>
+    <title>Buy Me A Coffee - HonoWA WhatsApp API</title>
     <link rel="icon" href="https://raw.githubusercontent.com/elianhardyy/hono-wa-web-multidevice/refs/heads/main/public/assets/uploads/honowa.png" type="image/png">
-    <meta name="lang" content="en">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Buy Me A Coffee - HonoWA WhatsApp API">
+    <meta name="description" content="REST API & Dashboard untuk WhatsApp multi-session menggunakan Hono.js. Dukung pengembangan HonoWA dengan donasi kopi melalui QRIS otomatis.">
+    <meta name="keywords" content="WhatsApp API, Hono.js, HonoWA, WhatsApp Gateway, Multi-session WhatsApp, REST API WhatsApp, Buy Me A Coffee, QRIS Otomatis, WhatsApp Bot, API WhatsApp Indonesia">
+    <meta name="author" content="Ardian Ryan">
+    <meta name="language" content="Indonesian">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+
+    <!-- AI & Search Engine Crawlers -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="GPTBot" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://donate.honowa.my.id/">
+    <meta property="og:title" content="Buy Me A Coffee - HonoWA WhatsApp API">
+    <meta property="og:description" content="REST API & Dashboard untuk WhatsApp multi-session. Dukung pengembangan HonoWA dengan donasi kopi melalui QRIS otomatis.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/elianhardyy/hono-wa-web-multidevice/refs/heads/main/public/assets/uploads/honowa.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://donate.honowa.my.id/">
+    <meta property="twitter:title" content="Buy Me A Coffee - HonoWA WhatsApp API">
+    <meta property="twitter:description" content="REST API & Dashboard untuk WhatsApp multi-session. Dukung pengembangan HonoWA dengan donasi kopi melalui QRIS otomatis.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/elianhardyy/hono-wa-web-multidevice/refs/heads/main/public/assets/uploads/honowa.png">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="ID-JK">
+    <meta name="geo.placename" content="Jakarta">
+    <meta name="geo.position" content="-6.208763;106.845599">
+    <meta name="ICBM" content="-6.208763, 106.845599">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HonoWA",
+      "operatingSystem": "Web",
+      "applicationCategory": "CommunicationApplication",
+      "description": "REST API & Dashboard untuk WhatsApp multi-session menggunakan Hono.js.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "IDR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ardian Ryan"
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
@@ -43,11 +99,13 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
         body {
             box-sizing: border-box;
         }
+
         #qrContainer canvas {
             max-width: 100%;
             height: auto !important;
             margin: 0 auto;
         }
+
         .material-icons {
             font-size: inherit;
             line-height: inherit;
@@ -83,7 +141,8 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
                     class="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-md border border-amber-100 dark:border-gray-700 space-y-3">
                     <div class="flex items-center gap-3">
                         <span class="material-icons text-rose-400 !text-[20px]">favorite</span>
-                        <span class="text-sm text-gray-700 dark:text-gray-200">100% of donations go directly to creator</span>
+                        <span class="text-sm text-gray-700 dark:text-gray-200">100% of donations go directly to
+                            creator</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-icons text-amber-400 !text-[20px]">bolt</span>
@@ -98,7 +157,8 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
                     ☕ Buy Me A Coffee </button>
             </div><!-- Step 2: Amount -->
             <div id="step2" class="hidden space-y-6">
-                <button onclick="goStep(1)" class="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700">
+                <button onclick="goStep(1)"
+                    class="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700">
                     <span class="material-icons !text-[18px]">arrow_back</span> Back
                 </button>
                 <h2 class="text-xl font-bold text-gray-800 dark:text-white text-center">Select Amount</h2>
@@ -124,21 +184,26 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
                     Proceed to Payment </button>
             </div><!-- Step 3: QRIS -->
             <div id="step3" class="hidden space-y-6">
-                <button onclick="goStep(2)" class="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700">
+                <button onclick="goStep(2)"
+                    class="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700">
                     <span class="material-icons !text-[18px]">arrow_back</span> Back
                 </button>
                 <div class="text-center space-y-4">
                     <h2 class="text-xl font-bold text-gray-800 dark:text-white">Scan QRIS Code</h2>
                     <p id="nominalDisplay" class="text-amber-600 dark:text-amber-400 font-bold text-lg"></p>
-                    <div id="merchantDisplay" class="hidden flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                    <div id="merchantDisplay"
+                        class="hidden flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                         <span class="material-icons !text-[18px]">store</span>
                         <span id="displayMerchantName"></span>
                     </div>
                     <!-- Dynamic QRIS Container -->
-                    <div class="bg-white p-4 rounded-2xl shadow-md inline-block mx-auto min-h-[232px] min-w-[232px] flex items-center justify-center">
+                    <div
+                        class="bg-white p-4 rounded-2xl shadow-md inline-block mx-auto min-h-[232px] min-w-[232px] flex items-center justify-center">
                         <div id="qrContainer" class="relative">
                             <div id="qrLoading" class="flex flex-col items-center gap-2">
-                                <div class="w-8 h-8 border-4 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
+                                <div
+                                    class="w-8 h-8 border-4 border-amber-400 border-t-transparent rounded-full animate-spin">
+                                </div>
                                 <p class="text-xs text-gray-400">Generating QR...</p>
                             </div>
                         </div>
@@ -202,7 +267,7 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
                 }
 
                 const qrString = data.QR || data.qr || data.qris;
-                
+
                 if (data.merchant) {
                     merchantName.textContent = data.merchant;
                     merchantDisplay.classList.remove('hidden');
