@@ -16,6 +16,7 @@ app.use('/sitemap.xml', serveStatic({ path: './sitemap.xml' }))
 app.use('/humans.txt', serveStatic({ path: './humans.txt' }))
 app.use('/security.txt', serveStatic({ path: './security.txt' }))
 app.use('/.well-known/security.txt', serveStatic({ path: './security.txt' }))
+app.use('/honowa.png', serveStatic({ path: './public/honowa.png' }))
 
 // Serve qrisdinamis directory if needed (it has some assets like images)
 app.use('/qrisdinamis/*', serveStatic({ root: './' }))
