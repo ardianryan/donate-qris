@@ -19,6 +19,7 @@ $qrisUtama = $env['QRIS_UTAMA'] ?? '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Me A Coffee</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/elianhardyy/hono-wa-web-multidevice/refs/heads/main/public/assets/uploads/honowa.png" type="image/png">
     <meta name="lang" content="en">
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
