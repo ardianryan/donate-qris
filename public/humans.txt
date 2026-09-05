@@ -1,17 +1,17 @@
 /* TEAM */
     Developer: Ardian Ryan
-    Contact: hello [at] honowa.my.id
+    Contact: hello [at] ppti.me
     Twitter: @ardianryan
     Location: Jakarta, Indonesia
 
 /* THANKS */
     Hono.js Team
-    whatsapp-web.js Team
-    Rifaldo-dev (Reference logic)
+    MangoTek Contributors
+    Rifaldo-dev (QRIS reference logic)
 
 /* SITE */
-    Last update: 2026/05/02
-    Repository: https://github.com/elianhardyy/hono-wa-web-multidevice/
-    Language: Indonesian / English
+    Last update: 2026/09/05
+    Repository: https://github.com/ardianryan/donate-qris
+    Language: English
     Doctype: HTML5
-    IDE: VS Code, Antigravity AI
+    IDE: Antigravity AI, VS Code

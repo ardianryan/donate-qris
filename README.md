@@ -1,72 +1,55 @@
-# Donate QRIS - Buy Me A Coffee for HonoWA
+# Donate QRIS - Support Our Project
 
-Halaman donasi interaktif untuk mendukung pengembangan **HonoWA (Hono.js + Unofficial WhatsApp API)** menggunakan pembayaran QRIS dinamis. Sekarang dibangun menggunakan **Hono.js** dan **TypeScript** untuk performa yang lebih baik dan kemudahan pengembangan.
+An interactive, high-performance donation page designed to support ongoing project and open-source software development using dynamic QRIS payments. Built with **Hono.js**, **TypeScript**, and modern web standards.
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-- **Hono.js Framework**: Menggunakan Hono.js yang ringan dan cepat.
-- **Dynamic QRIS**: Menghasilkan kode QRIS otomatis sesuai dengan nominal yang dipilih menggunakan API pihak ketiga.
-- **Modern UI**: Desain responsif berbasis Tailwind CSS dengan dukungan Dark Mode.
-- **Material Icons**: Menggunakan Google Material Icons untuk antarmuka yang bersih dan state-of-the-art.
-- **SEO & AI Optimized**: Dilengkapi dengan meta tags lengkap untuk Google Search dan AI crawlers (GPTBot, dll).
-- **Environment Config**: Pengaturan kode QRIS utama melalui file `.env`.
-- **Reference Included**: Menyertakan kode sumber asli dari `qrisdinamis` sebagai referensi logika.
+- **Hono.js Framework**: Lightweight, blazing fast server runtime.
+- **Dynamic QRIS**: Generates instant QRIS payment codes with custom amounts on the fly.
+- **Mobile QR Download**: Easily save/download QRIS images directly to mobile photo galleries for seamless scanning in banking and e-wallet apps.
+- **Auto Dark & Light Mode**: Automatically detects and synchronizes with system theme preference (`prefers-color-scheme`) with optional manual toggle.
+- **Modern Responsive UI**: Built with Tailwind CSS and Google Material Icons.
+- **SEO & Crawler Optimized**: Full metadata suite with Open Graph, Twitter cards, and JSON-LD Schema.
+- **Configurable**: Easy configuration via `.env` files.
 
-## 🛠️ Persiapan Lokal
+## 🛠️ Getting Started Locally
 
-### 1. Prasyarat
-- Node.js (v18 atau terbaru)
-- npm atau yarn
+### 1. Prerequisites
+- Node.js (v18 or newer)
+- npm or pnpm
 
-### 2. Instalasi
-Clone repositori dan install dependensi:
+### 2. Installation
+Clone the repository and install dependencies:
 ```bash
 npm install
 ```
 
-### 3. Konfigurasi
-Buat file `.env` di direktori akar dan tambahkan kode QRIS utama Anda:
-
+### 3. Configuration
+Create a `.env` file in the project root:
 ```env
-QRIS_UTAMA=00020101021126610014... (kode qris lengkap Anda)
+QRIS_UTAMA=00020101021126610014... (your master static QRIS string)
 PORT=3000
 ```
 
-### 4. Jalankan Aplikasi
+### 4. Run Development Server
 ```bash
 npm run dev
 ```
-Buka `http://localhost:3000` di browser Anda.
+Open `http://localhost:3000` in your browser.
 
-## ☁️ Deploy ke Vercel
+## ☁️ Deploy to Vercel
 
-Aplikasi ini dapat di-deploy ke Vercel dengan sangat mudah:
+1. **Push to GitHub**: Push your changes to your GitHub repository.
+2. **Import to Vercel**: Connect your repository in the Vercel Dashboard.
+3. **Environment Variables**: Add `QRIS_UTAMA` in Vercel Project Settings.
+4. **Deploy**: Deploy directly without extra build setup.
 
-1.  **Push ke GitHub**: Pastikan kode Anda sudah di-push ke repositori GitHub.
-2.  **Import ke Vercel**: Buka [Vercel Dashboard](https://vercel.com/new) dan import proyek Anda.
-3.  **Environment Variables**: Di Vercel, tambahkan variable environment berikut:
-    -   `QRIS_UTAMA`: Kode QRIS utama Anda.
-4.  **Deploy**: Klik tombol Deploy. Vercel akan otomatis mengenali konfigurasi dan menjalankan aplikasi.
+## 📂 Project Structure
 
-> [!TIP]
-> Jika Anda menggunakan Hono Node Server, pastikan untuk menyesuaikan `entry point` jika diperlukan atau gunakan `vercel.json` untuk routing.
-
-## 📂 Struktur Proyek
-
-- `src/index.ts`: Entry point server Hono.js.
-- `public/index.html`: Template utama frontend.
-- `qrisdinamis/`: Folder referensi logika generator QRIS.
-- `.env`: File konfigurasi (diabaikan oleh git).
-- `robots.txt`, `sitemap.xml`, `humans.txt`, `security.txt`: File optimasi SEO dan metadata.
-
-## 🔗 Link Terkait
-
-- **Main Repository**: [HonoWA - WhatsApp API](https://github.com/elianhardyy/hono-wa-web-multidevice/)
-- **Official Domain**: [donate.ppti.me](https://donate.ppti.me)
-
-## 📄 Lisensi
-
-Proyek ini merupakan bagian dari ekosistem HonoWA. Pastikan untuk mencantumkan kredit yang sesuai jika digunakan ulang.
+- `src/index.ts`: Hono.js server entry point.
+- `public/index.html`: Main frontend application template.
+- `public/`: Static assets (`robots.txt`, `sitemap.xml`, `humans.txt`, `security.txt`).
+- `.env`: Environment variables (git-ignored).
 
 ---
-*Dikembangkan oleh [Ardian Ryan](https://github.com/ardianryan)*
+*Developed with ❤️ by [Ardian Ryan](https://github.com/ardianryan)*

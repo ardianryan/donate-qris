@@ -1,7 +1,7 @@
 {
   "name": "buy-me-a-coffee",
   "version": "1.0.0",
-  "description": "Halaman donasi interaktif untuk mendukung pengembangan **HonoWA (Hono.js + Unofficial WhatsApp API)** menggunakan pembayaran QRIS dinamis.",
+  "description": "Interactive donation and support page for our projects powered by Hono.js, TypeScript, and dynamic QRIS payment.",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -20,13 +20,13 @@
   },
   "homepage": "https://github.com/ardianryan/donate-qris#readme",
   "dependencies": {
-    "@hono/node-server": "^2.0.1",
+    "@hono/node-server": "^2.1.1",
     "dotenv": "^17.4.2",
-    "hono": "^4.12.16"
+    "hono": "^4.13.7"
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "tsx": "^4.21.0",
-    "typescript": "^6.0.3"
+    "@types/node": "^26.4.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
   }
 }
